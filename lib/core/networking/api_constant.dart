@@ -6,6 +6,22 @@ class ApiConstants {
   static const String resetPasswordrequest = 'api/Account/Sendcode';
   static const String verifyCode="api/Account/VerifyCode";
   static const String resetNewPass="api/Account/ResetPassword";
+   static const String getMovie="api/Movie/GetAll";
+   static const String toogleFav="api/Favorits";
+      static const String isFav="api/Favorits";
+      static const String getUserFav="api/Favorits";
+      static const String addToCart="api/Cart";
+      static const String GetCartMovie="api/Cart";
+      static const String deleteMovie="api/Cart";
+      static const String checkout="api/Checkout";
+      static const String watchMovie="api/Movie/watch";
+      static const String getMovieReviewStatus="api/Review/status";
+      static const String getMovieReview="api/Review/movie";
+      static const String deleteMovieReview="api/Review";
+      static const String addRev="api/Review";
+      
+   
+
 }
 class ApiErrors {
   static const String badRequestError = "badRequestError";
@@ -23,4 +39,5 @@ class ApiErrors {
   static const String loadingMessage = "loading_message";
   static const String retryAgainMessage = "retry_again_message";
   static const String ok = "Ok";
+ 
 }

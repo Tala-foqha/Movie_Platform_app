@@ -1,4 +1,4 @@
-// features/splash/widgets/Splash_View_Body.dart
+// features/splash/widgets/splash_view_body.dart
 import 'package:flutter/material.dart';
 
 class SplashViewBody extends StatelessWidget {
@@ -7,15 +7,17 @@ class SplashViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Center(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset("assets/images/splashImage.png",
-          width: 86.5,
-          height: 74.9
-      
-          )
-        ]),
+      child: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset("assets/images/splashImage.png",
+            width: 86.5,
+            height: 74.9
+        
+            )
+          ]),
+      ),
     );
   }}

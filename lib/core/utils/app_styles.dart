@@ -42,6 +42,7 @@ import 'package:google_fonts/google_fonts.dart';
   static final TextStyle semiBold16 = GoogleFonts.cairo(
     fontWeight: FontWeight.w600,
     fontSize: 16,
+    color: Colors.white
   );
 
   static final TextStyle bold28 = GoogleFonts.cairo(

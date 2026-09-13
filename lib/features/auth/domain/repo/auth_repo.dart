@@ -17,4 +17,5 @@ abstract class AuthRepo {
   Future<Either<Failure, PassResetResponse>> resetPasswordRequest(String email);
   Future<Either<Failure,VerifyCodeResponse>>verifyCode(VerifyCodeRequest request);
   Future<Either<Failure,ResetNewPasswordResponse>>resetPassword(ResetNewPasswordRequest request);
+  
 }

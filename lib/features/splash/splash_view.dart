@@ -1,5 +1,6 @@
 // features/splash/splash_view.dart
 import 'package:flutter/material.dart';
+
 import 'package:movie_platform_app/features/on_bording/on_boarding_view.dart';
 import 'package:movie_platform_app/features/splash/widgets/splash_view_body.dart';
 
@@ -16,21 +17,55 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-    excuteNavigation();
+    executeNavigation();
   }
 
-  void excuteNavigation() async {
-    await Future.delayed(const Duration(seconds: 3));
+ Future<void> executeNavigation() async {
+  await Future.delayed(
+    const Duration(seconds: 3),
+  );
 
-    if (!mounted) return;
+  if (!mounted) return;
 
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const OnBoardingView(),
-      ),
-    );
-  }
+  Navigator.pushReplacementNamed(
+    context,
+    OnBoardingView.onBording,
+  );
+}
+  // bool isOnBordingViewSeen =
+  //     SharedPrefHelper.getBool(
+  //       SharedPrefKeys.isOnBoardingViewSeen,
+  //     );
+
+  // await Future.delayed(
+  //   const Duration(seconds: 3),
+  // );
+
+  // if (!mounted) return;
+
+  // if (!isOnBordingViewSeen) {
+  //   Navigator.pushReplacementNamed(
+  //     context,
+  //     OnBoardingView.onBording,
+  //   );
+  //   return;
+  // }
+
+  // final accessToken = SharedPrefHelper.getString(
+  //   SharedPrefKeys.userTokens,
+  // );
+
+  // if (accessToken.isNotEmpty) {
+  //   Navigator.pushReplacementNamed(
+  //     context,
+  //     OnBoardingView.onBording,
+  //   );
+  // } else {
+  //   Navigator.pushReplacementNamed(
+  //     context,
+  //     SigninView.routeName,
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {

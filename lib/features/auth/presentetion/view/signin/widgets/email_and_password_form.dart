@@ -46,6 +46,7 @@ class _EmailAndPasswordFormState extends State<EmailAndPasswordForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
+      autovalidateMode: context.read<SigninCubit>().autovalidateMode,
       key:context.read<SigninCubit>().formKey,
       child:
   Column(

@@ -50,8 +50,12 @@ class _NewAndConfirmPasswordWidgetState extends State<NewAndConfirmPasswordWidge
         
         controller: context.read<ForgotpasswordCubit>().passwordController,
         hinttext: "Password", validator: (value){
-        if (value == null || value.isEmpty||!AppRegex.isPasswordValid(value)){
-         return "please enter valid password";
+        if (value == null || value.isEmpty){
+         return "please enter password";
+        }
+        if(!AppRegex.isPasswordValid(value)){
+         return "please enter a valid password";
+
         }
       }),
       SizedBox(height: 16,),
@@ -75,9 +79,14 @@ class _NewAndConfirmPasswordWidgetState extends State<NewAndConfirmPasswordWidge
    
         controller: context.read<ForgotpasswordCubit>().confirmPasswordController,
         hinttext: "Confirm Password", validator: (value){
-        if (value == null || value.isEmpty||!AppRegex.isPasswordValid(value)){
-         return "please enter valid password";
-        }if (value != context.read<ForgotpasswordCubit>().passwordController.text) {
+        if (value == null || value.isEmpty){
+         return "please enter password";
+        }
+        if(!AppRegex.isPasswordValid(value)){
+         return "please enter a valid password";
+
+        }
+        if (value != context.read<ForgotpasswordCubit>().passwordController.text) {
               return 'Password does not match';
             }
             return null;

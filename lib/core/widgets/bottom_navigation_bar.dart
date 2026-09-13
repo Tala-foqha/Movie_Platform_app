@@ -47,8 +47,8 @@ class CustomBottomNavBar extends StatelessWidget {
           ),
           _buildItem(
             index: 3,
-            image: 'assets/SVG/more_vert.svg',
-            title: 'More',
+            image: 'assets/SVG/notification.svg',
+            title: 'more',
           ),
         ],
       ),
@@ -73,10 +73,7 @@ class CustomBottomNavBar extends StatelessWidget {
         width: isSelected ? 113 : 58,
         height: 58,
 
-        // padding: const EdgeInsets.symmetric(
-        //   horizontal: 15,
-        // ),
-
+       
         decoration: BoxDecoration(
           color: isSelected
               ? AppColrs.primaryColor

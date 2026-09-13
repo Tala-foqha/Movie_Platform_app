@@ -21,6 +21,7 @@ class BoxCodeWidget extends StatelessWidget {
       height: 55,
       textStyle: const TextStyle(
         fontSize: 20,
+        color: Colors.white,
         fontWeight: FontWeight.bold,
       ),
       decoration: BoxDecoration(
@@ -58,6 +59,7 @@ class BoxCodeWidget extends StatelessWidget {
     return Pinput(
       controller: controller,
       length: 4,
+      
       keyboardType: TextInputType.number,
       defaultPinTheme: defaultPinTheme,
       focusedPinTheme: focusedPinTheme,
